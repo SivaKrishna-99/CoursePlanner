@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+		<title>Course Planner</title>  
+    </head>
+    <body>
+        <div class="main_menu">
+            <div class="title">
+                <h1>Course Planner</h1>
+            </div>
+  
+        </div>
+        
+        <ul class="topnav">
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'search_courses' %}">Search Courses</a></li>
+		</li>
+         
+        </ul>
+        
+		<div class="container text-center">
+
+			<h3>ABOUT</h3>
+			  <blockquote class="left-pull">
+				<p>"What lies behind you and what lies in front of you, pales in comparison to what lies inside of you."</p>
+				<span class="ref">- Ralph Waldo Emerson</span>
+			  </blockquote>
+
+
+		
+			<p id="about_para">This is the course planner designed for students enrolled in Computer Science MEng program. Our aim is to help current and future students enrolled in MEng program to efficiently create their Plan of Study in the format required by the department. Based on student's enrollment details and preferences, we will provide them choices to plan their degree. </p>
+			<br>
+			<h3>Meet the team</h3>
+			<br>
+		<div class="row">
+			<article class="dishang">
+				<a target="_blank">
+					<img class="image fit thumb" src="{% static 'dishang.PNG' %}" alt="" width="175" height="175"/>
+					<h4 class="article_header">Dishang Valotia</h4>
+					<li><a href="https://www.linkedin.com/in/dishang-valotia/" target="_blank" class="fa fa-linkedin" style="padding = 2px; margin = 5px;"><span class="label"></span></a>     <a href="https://github.com/dishang13" target="_blank" class="fa fa-github"><span class="label"></span></a></li>
+				</a>
+				</article>
+
+
+			<article class="suraj">
+				<a target="_blank">
+					<img class="image fit thumb" src="{% static 'suraj.PNG' %}" alt="" width="175" height="174"/>
+					<h4 class="article_header">Suraj Mane</h4>
+					<li><a href="https://www.linkedin.com/in/suraj-mane-6563799a/" target="_blank" class="fa fa-linkedin" style="padding = 2px; margin = 5px;"><span class="label"></span></a>     <a href="https://github.com/surajmane" target="_blank" class="fa fa-github"><span class="label"></span></a></li>
+
+
+				</a>
+			</article>
+
+			<article class="namrata">
+				<a target="_blank">
+					<img class="image fit thumb" src="{% static 'namrata.jpg' %}" alt="" width="175" height="175"/>
+					<h4 class="article_header">Namrata Mali</h4>
+					<li><a href="https://www.linkedin.com/in/namratam26/" target="_blank" class="fa fa-linkedin" style="padding = 2px; margin = 5px;"><span class="label"></span></a>     <a href="https://github.com/NamrataMali26" target="_blank" class="fa fa-github"><span class="label"></span></a></li>
+
+				</a>
+			</article>
+
+			<article class="shreyas">
+				<a target="_blank">
+					<img class="image fit thumb" src="{% static 'shreyas.PNG' %}" alt="" width="175" height="175"/>
+					<h4 class="article_header">Shreyas Joshi</h4>
+					<li><a href="https://www.linkedin.com/in/shreyas21295/" target="_blank" class="fa fa-linkedin" style="padding = 2px; margin = 5px;"><span class="label"></span></a>     <a href="https://github.com/shreyas21295" target="_blank" class="fa fa-github"><span class="label"></span></a></li>
+
+				</a>
+			</article>
+
+			<article class="siva">
+				<a target="_blank">
+					<img class="image fit thumb" src="{% static 'siva.PNG' %}" alt="" width="175" height="175"/>
+					<h4 class="article_header">Siva Vattikonda</h4>
+					<li><a href="https://www.linkedin.com/in/sivakrishna-v/" target="_blank" class="fa fa-linkedin" style="padding = 2px; margin = 5px;"><span class="label"></span></a>     <a href="https://github.com/SivaKrishna-99" target="_blank" class="fa fa-github"><span class="label"></span></a></li>
+
+				</a>
+			</article>
+
+
+		<div class="container">
+		  <h3 class="text-center">Contact</h3>
+		  <p class="text-center"><em>We love VT CS!</em></p>
+		  
+			
+			<p>We would love your feedback</p>
+			<p>Reach out to us at: course_planner_meng@vt.edu</p>
+		
+			
+			</div>
+		  </div>
+		</div>
+		</div>
+    </body>
+</html>

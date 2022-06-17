@@ -1,0 +1,33 @@
+Schema
+
+Course - 
+    Id - auto generated
+    Course Request Number - Number
+    Course Number - number
+    Course Name - text
+    Department - text
+    Term Offering - Fall/Spring/Summer (Multiselect)
+    Campus - Blacksburg/NCR/Virtual (Multiselect)
+    Modality - Online Asynchronous/Online Synchronous/Hybrid/F2F
+    Course Description - text
+    Course Website - text
+    Faculty - text
+    Prerequisite Courses - Foreign Key
+    Prerequisite Concepts - text
+    Concentration - Foreign Key
+    Learning Objective - text
+    Syllabus - blob file
+    Credit Hours - number
+    Special Study - boolean
+
+Concentration - 
+    Id - auto generated
+    Name - text
+
+Degree Requirements - 
+    Id - auto generated
+    Criteria - Concentration/Cognate/Mandatory Course
+    Course - Foreign Key
+    Comparator - At Least/At Most
+    Waivable - Boolean
+    Value - Number

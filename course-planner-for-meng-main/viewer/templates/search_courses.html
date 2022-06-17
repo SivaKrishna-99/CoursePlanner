@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/search_courses.css' %}">
+    <title>Course Planner</title>  
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/search_courses.js' %}"></script>
+</head>
+
+
+<body>
+    <div class="main_content">
+        <div class="v3_9">
+            <form name="searchForm" method="GET" action="{% url 'search_results' %}" onsubmit='validation()'>
+                
+                <div class="v3_11" for="course_number">
+                    <span>
+                       
+                        <select name="course_number" class='course_number'>
+                            <option value="" selected="selected" >Course Number</option>
+                            {% if course_numbers %}
+                                {% for l in course_numbers %}
+                                    <OPTION value={{l}}>{{l}}</OPTION>
+                                {% endfor %}
+                            {% else %}
+                            {% endif %}
+                            </select>
+                    </span>
+                </div>
+                <div class="v3_12">
+                    <span>
+                        <select name="course_name" class='course_name'>
+                            <option value="" selected="selected" >Course Name</option>
+                            {% if course_names %}
+                                {% for l in course_names %}
+                                    <OPTION value="{{l}}">{{l}}</OPTION>
+                                {% endfor %}
+                            {% else %}
+                            {% endif %}
+                            </select>
+                            
+
+                        
+                    </span>
+                </div>
+                
+                <div class="v3_14">
+                    <select name="campus" class='campus'>
+                        <option value="" selected="selected" >Campus</option>
+                        {% if campus %}
+                                {% for l in campus %}
+                                    <OPTION value={{l}}>{{l}}</OPTION>
+                                {% endfor %}
+                            {% else %}
+                            {% endif %}
+                    </select>
+                </div>
+
+                <div class="v3_15">
+                    <select name="concentration" class='concentration'>
+                        <option value="" selected="selected" >Concentration</option>
+                        <OPTION value="1">Software Development & Applications</OPTION>
+                        <OPTION value="2">Data Analytics & Artificial Intelligence</OPTION>
+                        <OPTION value="3">Computer Security</OPTION>
+                        <OPTION value="4">Human-Computer Interaction</OPTION>        
+                    </select>
+                </div>
+                <div class="v3_16">
+                    <select name="course_modality" class='course_modality'>
+                        <option value="" selected="selected" >Course Modality</option>
+                        {% if modality %}
+                                {% for l in modality %}
+                                    <OPTION value={{l}}>{{l}}</OPTION>
+                                {% endfor %}
+                            {% else %}
+                            {% endif %}
+                    </select>
+                </div>
+
+                <div class="v3_17">
+                    <select name="term_offering" class='term_offering'>
+                        <option value="" selected="selected" >Semester Offering</option>
+                        {% if term_offering %}
+                                {% for l in term_offering %}
+                                    <OPTION value={{l}}>{{l}}</OPTION>
+                                {% endfor %}
+                            {% else %}
+                            {% endif %}
+                    </select>
+                </div>
+                
+                <button class="search_button" type="submit">Search Courses</button>
+            </form>
+            
+        </div>
+
+        <div class="main_menu">
+            <div class="title">
+                <h1>Course Planner</h1>
+            </div>
+        </div>
+
+        <ul class="topnav">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'search_courses' %}">Search Courses</a></li>
+        <li style="float:right"><a href="{% url 'about' %}">About</a></li>
+        </ul>
+
+    </div>  
+
+</body>
+</html>

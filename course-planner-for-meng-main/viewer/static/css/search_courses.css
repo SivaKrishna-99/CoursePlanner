@@ -1,0 +1,390 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans', sans-serif;
+
+}
+body {
+    font-size: 14px;
+    background-image: url("../vt_pylons.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main_menu{
+    width: 100%;
+    position: relative;
+    background-color: #660000;
+  }
+  
+.title{
+    padding: 8px;
+    color: white;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;
+    font-size: 18px;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+    text-align: center;
+    position: relative;
+}
+
+ul.topnav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: lightgray;
+position: -webkit-sticky; 
+position: sticky;
+top: 0;
+position: relative;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+display: block;
+color: black;
+text-align: center;
+font-size: 18px;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: gray;}
+
+ul.topnav li a.active {background-color: gray;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+ul.topnav li.right,
+ul.topnav li {float: none;}
+}
+
+.v3_2 {
+    width: 100%;
+    height: 800px;
+    background: rgba(255, 255, 255, 1);
+    opacity: 50;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.v3_9 {
+    height: 600px;
+    background: rgba(203, 227, 228, 1);
+    opacity: 1;
+    position: absolute;
+    top: 105%;
+    left: 0%;
+}
+.course_number {
+    width: 248px;
+    height: 55px;
+    background: rgba(255, 232, 232, 1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 5%;
+    font-size: 20px;
+}
+
+
+.course_name {
+    width: 248px;
+    height: 55px;
+    background: rgba(255, 232, 232, 1);
+    opacity: 1;
+    position: absolute;
+    top: 60px;
+    left: 5%;
+    font-size: 20px;
+}
+.campus {
+    width: 248px;
+    height: 55px;
+    background: rgba(255, 232, 232, 1);
+    opacity: 1;
+    position: absolute;
+    top: 120px;
+    left: 5%;
+    font-size: 20px;
+}
+
+.concentration {
+    width: 248px;
+    height: 55px;
+    background: rgba(255, 232, 232, 1);
+    opacity: 1;
+    position: absolute;
+    top: 180px;
+    left: 0%;
+    font-size: 20px;
+}
+
+.course_modality {
+    width: 248px;
+    height: 55px;
+    background: rgba(255, 232, 232, 1);
+    opacity: 1;
+    position: absolute;
+    top: 240px;
+    left: 5%;
+    font-size: 20px;
+}
+
+.term_offering {
+    width: 248px;
+    height: 55px;
+    background: rgba(255, 232, 232, 1);
+    opacity: 1;
+    position: absolute;
+    top: 300px;
+    left: 5%;
+    font-size: 20px;
+}
+
+.search_button {
+    width: 248px;
+    top: 370px;
+    color: white;
+    background-color: #660000;
+    position: absolute;
+    font-family: Noto Sans;
+    font-weight: Medium;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.v28_52 {
+    width: 100%;
+    height: 100px;
+    opacity: 5;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.v3_4 {
+    width: 80%;
+    height: 40%;
+    background: rgba(255, 170, 148, 0.6499999761581421);
+    opacity: 100;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    right: 40px;
+    bottom: 40px;
+    overflow: hidden;
+}
+
+
+
+.v3_6 {
+    width: 20%;
+    position: relative;
+    color: white;
+    top: 50px;
+    left: 10px;
+    font-family: Noto Sans;
+    font-weight: normal;
+    background-color: #660000;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+}
+
+.v28_53 {
+    width: 20%;
+    position: relative;
+    color: white;
+    background-color: #660000;
+    top: 50px;
+    left: 280px;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+}
+.v27_2 {
+    width: 20%;
+    height: 50px;
+    right: 250px;
+    color: white;
+    position: relative;
+    font-family: verdana;
+    font-weight: normal;
+    font-size: 28px;
+    opacity: 1;
+    text-align: center;
+}
+
+.main_content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-color: #660000;
+    top: 0px;
+    bottom: 20px;
+}
+
+.v28_51 {
+    width: 52%;
+    height: 40%;
+    background-color: #E1E1E1E6;
+    opacity: 1;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.v20_109 {
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 12.25%;
+    left: 12.25%;
+    right: 12.25%;
+    bottom: 12.25%;
+    font-family: Noto Sans;
+    font-weight: Medium;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.v28_43 {
+    width: 201px;
+    height: 46px;
+    background: rgba(255, 185, 104, 1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.v28_45 {
+    width: 201px;
+    color: rgba(43, 38, 38, 1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Noto Sans;
+    font-weight: Medium;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.v28_47 {
+    width: 201px;
+    height: 46px;
+    background: rgba(255, 185, 104, 1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.v28_48 {
+    width: 201px;
+    color: rgba(43, 38, 38, 1);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: Noto Sans;
+    font-weight: Medium;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.v28_57 {
+    width: 224px;
+    color: rgba(129, 122, 122, 1);
+    position: absolute;
+    top: 178px;
+    left: 96px;
+    font-family: Noto Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v28_61 {
+    width: 224px;
+    color: rgba(129, 122, 122, 1);
+    position: absolute;
+    top: 256px;
+    left: 96px;
+    font-family: Noto Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v28_62 {
+    width: 224px;
+    color: rgba(129, 122, 122, 1);
+    position: absolute;
+    top: 339px;
+    left: 96px;
+    font-family: Noto Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v28_59 {
+    width: 224px;
+    color: rgba(129, 122, 122, 1);
+    position: absolute;
+    top: 419px;
+    left: 96px;
+    font-family: Noto Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v28_63 {
+    width: 224px;
+    color: rgba(129, 122, 122, 1);
+    position: absolute;
+    top: 499px;
+    left: 96px;
+    font-family: Noto Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v28_64 {
+    width: 224px;
+    color: rgba(129, 122, 122, 1);
+    position: absolute;
+    top: 578px;
+    left: 96px;
+    font-family: Noto Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}

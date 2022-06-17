@@ -1,0 +1,233 @@
+/* {
+    box-sizing: border-box;
+  } */
+body {
+    font-size: 14px;
+}
+
+.v29_257 {
+    width: 100%;
+    height: 800px;
+    background: rgba(255, 255, 255, 1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.v29_330 {
+    width: 100%;
+    height: 555px;
+    background: rgba(203, 227, 228, 1);
+    opacity: 1;
+    position: absolute;
+    top: 169px;
+    left: 40px;
+    overflow: hidden;
+}
+
+.v29_262 {
+    width: 100%;
+    height: 122px;
+    background: url("../images/v29_262.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.v29_263 {
+    width: 100%;
+    height: 122px;
+    background: rgba(255, 170, 148, 0.6499999761581421);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.v29_264 {
+    width: 193px;
+    color: rgba(42, 37, 37, 1);
+    position: absolute;
+    top: 87px;
+    left: 295px;
+    font-family: Noto Sans;
+    font-weight: Medium;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v29_265 {
+    width: 200px;
+    color: rgba(43, 38, 38, 1);
+    position: absolute;
+    top: 87px;
+    left: 755px;
+    font-family: Noto Sans;
+    font-weight: Medium;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v29_267 {
+    width: 273px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 5px;
+    left: 463px;
+    font-family: Antic;
+    font-weight: Regular;
+    font-size: 48px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v29_368 {
+    width: 100%;
+    height: 57px;
+    background: url("../images/v29_368.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 169px;
+    left: 40px;
+    overflow: hidden;
+}
+
+.v29_331 {
+    width: 100%;
+    height: 57px;
+    background: rgba(99, 0, 49, 1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.v29_332 {
+    width: 675px;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 10px;
+    left: 21px;
+    font-family: Noto Sans;
+    font-weight: SemiBold;
+    font-size: 22px;
+    opacity: 1;
+    text-align: left;
+}
+
+.tb {
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+.tb th,
+.tb td {
+    border: solid 1px #777;
+    font-size: 20px;
+}
+
+table.tb {
+    margin-top: 230px;
+    margin-left: 39px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.v29_369 {
+    width: 123px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 584px;
+    left: 67px;
+    font-family: Noto Sans;
+    font-weight: SemiBold;
+    font-size: 22px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v29_372 {
+    width: 248px;
+    height: 55px;
+    background: rgba(255, 232, 232, 1);
+    opacity: 1;
+    position: absolute;
+    top: 630px;
+    left: 61px;
+    overflow: hidden;
+}
+
+.v29_373 {
+    width: 224px;
+    color: rgba(129, 122, 122, 1);
+    position: absolute;
+    top: 631px;
+    left: 73px;
+    font-family: Noto Sans;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+}
+
+.v29_374 {
+    width: 186px;
+    height: 56px;
+    background: rgba(255, 185, 104, 1);
+    opacity: 1;
+    position: absolute;
+    top: 631px;
+    left: 361px;
+    overflow: hidden;
+}
+
+.v49_80 {
+    width: 186px;
+    height: 56px;
+    background: rgba(255, 185, 104, 1);
+    opacity: 1;
+    position: absolute;
+    top: 631px;
+    left: 938px;
+    overflow: hidden;
+}
+
+.v29_375 {
+    width: 186px;
+    color: rgba(43, 38, 38, 1);
+    position: absolute;
+    top: 630px;
+    left: 361px;
+    font-family: Noto Sans;
+    font-weight: Medium;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+
+.v49_81 {
+    width: 186px;
+    color: rgba(43, 38, 38, 1);
+    position: absolute;
+    top: 630px;
+    left: 938px;
+    font-family: Noto Sans;
+    font-weight: Medium;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}

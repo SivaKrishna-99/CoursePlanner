@@ -1,0 +1,78 @@
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
+{% load static %}
+<!DOCTYPE html>
+
+
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/search_detail.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet" />
+    <title>Course Planner</title>  
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    </head>
+
+    <body>
+
+        <div class="main_menu">
+            <div class="title">
+                <h1>Course Planner</h1>
+            </div>
+  
+        </div>
+
+        
+        <ul class="topnav">
+          <!-- <li><a href="default.asp">Home</a></li> -->
+          <li><a method= "GET" href = "{% url 'index' %}">Home</a></li>
+          <!-- <li style="float:right"><a href="contact.asp" >Search Courses  </a></li> -->
+          <li><a method="GET" href = "{% url 'search_courses' %}">Search Courses</a></li>
+          <li style="float:right"><a href="{% url 'about' %}">About</a></li>
+        </ul>
+        
+        
+        <div class="full_page">
+            
+            <div id="slider-frame">
+                <table class="table" style="margin: 0 auto;">
+                    <thead>
+                      <tr>
+                        <th scope="col" width=auto>Course</th>
+                        <th scope="col" width=auto>Description</th>
+                        <th scope="col" width=auto>modality</th>
+                        <th scope="col" width=auto>Semester Offered</th>
+                        <th scope="col" width=auto>Instructor</th>
+                        <th scope="col" width=auto>Syllabus</th>
+                        <th scope="col" width=auto>Concentration</th>
+                        <th scope="col" width=auto>Prerequisite courses</th>
+
+                     
+                      </tr>
+                    </thead>
+                
+                        <tr>        
+                            <td>CS{{course_number}}: {{course_name}}</td>
+                            <td>{{description}}</td>
+                            <td>{{modality}}</td>
+                            <td>{{term_offering}}</td>
+                            <td>{{faculty}}</td>
+                            {% if syllabus != None %}
+                                <td><a href={{syllabus}}>{{syllabus}}</a></td>
+                            {% else %}
+                                <td>{{syllabus}}</td>
+                            {% endif %}
+                            <td>{{concentration}}</td>
+
+                            {% if preq %}
+                                {% for l in preq %}
+                                <td>{{l}}</td>
+                                {% endfor %}
+                            {% else %}
+                            {% endif %}
+                            
+                       </tr> 
+                </table>
+            </div>
+        </div>    
+    </body>
+</html>

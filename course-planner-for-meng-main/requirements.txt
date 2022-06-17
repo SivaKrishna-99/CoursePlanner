@@ -1,0 +1,8 @@
+django==3.2.5
+django-extensions==3.1.5
+numpy==1.21.5
+pandas==1.4.1
+pymysql==1.0.2
+mysqlclient==2.1.0
+fillpdf==0.7.1
+cryptography==37.0.0

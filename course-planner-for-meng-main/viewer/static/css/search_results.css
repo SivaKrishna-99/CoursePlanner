@@ -1,0 +1,128 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
+body {
+    font-size: 14px;
+    background-image: url("../vt_pylons.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main_menu{
+    width: 100%;
+    position: relative;
+    background-color: #660000;
+}
+
+.title{
+    padding: 8px;
+    color: white;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;
+    font-size: 18px;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+    text-align: center;
+    position: relative;
+}
+
+.body_page{
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+.search_courses{
+        font-size: 18px;
+        background-color: #660000;
+        color: white;
+
+}
+
+.full_page{
+    position: relative;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lightgray;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  position: relative;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: gray;}
+
+ul.topnav li a.active {background-color: gray;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+.campus{
+    background: rgba(255,232,232,1);
+    opacity: 1;
+    font-size: 15px;
+    
+}
+
+.no_of_semesters{
+    background: rgba(255,232,232,1);
+    opacity: 1;
+    font-size: 15px;
+    
+}
+
+.generate_pos_button{
+        background: white;
+        opacity: 1;
+        font-size: 15px;
+}
+
+#slider-frame{
+    width: 1000px;
+    position: relative;
+    align-content: center;
+    margin: auto;
+    padding: auto;
+    padding-top: 1%;
+    text-align: center;
+    /*padding: 10px;*/
+}
+
+.table{
+    background-color: #E1E1E1E6;
+    color: black;
+}
+th, td {
+    border:1px solid black;
+    padding:5px
+}

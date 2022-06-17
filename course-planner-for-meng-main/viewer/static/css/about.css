@@ -1,0 +1,222 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
+.fa {
+  padding: 10px;
+  font-size: 18px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: #2c4762;
+  color: white;
+}
+
+body {
+    background: white;
+    background-size: cover;
+}
+
+.side_bar{
+    background: #660000;
+    position: fixed;
+    left: 5;
+    width: 225px;
+    height: 100%;
+    padding: 20px;
+    -webkit-transition: all 0.5s ease;
+}
+
+.main_menu{
+    width: 100%;
+    height: 20%;
+    background-color: #660000;
+}
+
+.title{
+    padding: 8px;
+    color: white;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;
+    font-size: 18px;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+    text-align: center;
+}
+
+.search_courses{
+        font-size: 18px;
+        background-color: #660000;
+        color: white;
+
+}
+
+.full_page{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.mainContainer
+        {
+		display: flex;
+        margin:0 auto;
+        width: 60%;
+         }
+.content-section{
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(50, 50, 50, 0.75);
+	margin-top:30px;
+	width:1200px;
+
+}
+.content-section h2{
+
+    text-align: center;
+}
+
+.message
+{
+  margin-left:100px;
+  margin-right:100px
+}
+
+.container {
+  text-align: center;
+  padding: 80px 120px;
+}
+
+.col-sm-4 {
+  float: left;
+  width: 33.33%;
+}
+
+.col-sm-8 {
+  float: left;
+  width: 20%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.row {
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.rounded-circle {
+  border: 5px solid transparent;
+ 
+  width: 90%;
+  height: 70%;
+  opacity: 0.8;
+}
+.person:hover {
+  border-color: #f1f1f1;
+}
+
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lightgray;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: gray;}
+
+ul.topnav li a.active {background-color: gray;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+.left-pull { display: block; padding: 7px 11px; margin-left: 5px; margin-right: 10px; background: #555; color: #bcbcbc; font-weight: bold; line-height: 17px; font-size: 15px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+
+.left-pull p { font-style: italic; color: #d5d5d5; }
+.left-pull .ref { font-size: 11px; }
+
+#about_para {
+display: block; padding: 7px 11px; margin-left: 5px; margin-right: 10px; background: #555; color: white; font-weight: bold; line-height: 17px; font-size: 15px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+
+.dishang {
+float: left;
+padding:1px;
+border:1px solid #021a40;
+text-decoration:none;
+}
+
+.siva {
+margin-left: 30px;
+padding:1px;
+border:1px solid #021a40;
+text-decoration:none;
+}
+
+.namrata {
+margin-left: 30px;
+padding:1px;
+border:1px solid #021a40;
+text-decoration:none;
+}
+
+.suraj {
+margin-left: 30px;
+padding:1px;
+border:1px solid #021a40;
+text-decoration:none;
+}
+
+.shreyas {
+margin-left: 30px;
+padding:1px;
+border:1px solid #021a40;
+text-decoration:none;
+}

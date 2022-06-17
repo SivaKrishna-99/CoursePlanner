@@ -1,0 +1,98 @@
+{% load static %}
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/invalid_pos.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <script type="text/javascript">
+        var courses_selected = JSON.parse("{{ courses|safe }}".replaceAll("'", '"').replaceAll("False", "false").replaceAll("True", "true").replaceAll("None", "null"))
+        var concentrations = JSON.parse("{{ concentrations|safe }}".replaceAll("'", '"').replaceAll("False", "false").replaceAll("True", "true").replaceAll("None", "null"))
+        var waiver = JSON.parse("{{ waiver|safe }}".replaceAll("'", '"').replaceAll("False", "false").replaceAll("True", "true").replaceAll("None", "null"))
+        var errors = JSON.parse("{{ errors|safe }}".replaceAll("'", '"').replaceAll("False", "false").replaceAll("True", "true").replaceAll("None", "null"))
+    </script>
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <script type="text/javascript" src="{% static 'js/validate_pos.js' %}"></script>
+    <title>Course Planner</title>  
+</head>
+
+<body>
+    <div class="body_page">
+        <div class="main_menu">
+            <div class="title">
+                <h1>Course Planner</h1>
+            </div>
+        </div>
+
+        <ul class="topnav">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'search_courses' %}">Search Courses</a></li>
+            <li style="float:right"><a href="{% url 'about' %}">About</a></li>
+        </ul>
+
+        <div class="full_page">
+            <div id="slider-frame">
+                <div id="results_summary">
+                    <h1 style="text-align: center"> Summary </h1>
+                    <table class="table" id="'results_table">
+                        <thead>
+                            <tr>
+                                <th scope="col" width="150px">Semester</th>
+                                <th scope="col" width="700px">Course</th>
+                                <th scope="col" width="260px">Concentration</th>
+                            </tr>
+                        </thead>
+
+                        {% for i in courses %}
+                        <tr id="tr1">
+                            <td id="sem_course_1" style="text-align:center">{{i.semYear}}</td>
+                            <td id="course_1" >{{i.course.department}}{{i.course.course_number}}: {{i.course.course_name}}</td>
+                            <td id="concentration_1" style="text-align:center">{{i.course.concentration__names}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+
+                <div class="invalid_pos" id="invalid_pos">
+                    {% if errors %}
+                    <div style="padding-bottom: 0.3em;">
+                        <span
+                        style="color: red; font-weight: bold; font-size:x-large;text-decoration: underline;">INVALID
+                        POS</span>
+                    </div>
+                    {%for error in errors%}
+                    <div style="font-size: large;text-align: left;">
+                        <span class="invalid_pos_1" id="invalid_pos_1">Reason {{forloop.counter}}: {{error}}</span>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div style="padding-bottom: 0.3em;">
+                        <span
+                        style="color: green; font-weight: bold; font-size:x-large;text-decoration: underline;">VALID
+                        POS</span>
+                    </div>
+                    {% endif %}
+                </div>
+                <br>
+                <div class="base_options">
+                    <div class="select_conc" style="text-align: left;">
+                        <span>Select Concentration: </span>
+                        <br>
+                        <select name="concentration" id="concentration" style="font-size: x-large;">
+                            {% for c in concentrations %}
+                            <option value="{{c}}">{{c}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button class="download_pos_button" type="button" onclick="downloadPOS()">Download POS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

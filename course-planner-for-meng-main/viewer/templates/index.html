@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Course Planner</title>  
+</head>
+
+<body>
+
+    <div class="main_menu">
+        <div class="title">
+            <h1>Course Planner</h1>
+        </div>
+    </div>
+
+    <ul class="topnav">
+        <li><a href="{% url 'index' %}">Home</a><about/li>
+        <li><a href="{% url 'search_courses' %}">Search Courses</a></li>
+        <li style="float:right"><a href="{% url 'about' %}">About</a></li>
+    </ul>
+
+
+    <div class="full_page">
+
+        <div id="slider-frame">
+            <figure>
+                <img src="{% static 'image2.jpg' %}">
+            </figure>
+        </div>
+
+        <form id="side-bar-values" class="side-bar-values"  name="generateForm" method="GET" 
+            action="{% url 'select_courses' %}" onsubmit='return validateForm();'>
+            <input type="hidden" name="semester">
+            <input type="hidden" name="year">
+            <input type="hidden" name="no_of_semester">
+            <input type="hidden" name="campus">
+            <input type="hidden" name="concentration">
+            <input type="hidden" name="coures_modality">
+            <input type="hidden" name="waiver">
+            <div class="side_bar">
+                <ul class="side_bar_items close">
+                    <li>
+                        <div class="semester-selection">
+                            <a href="#">
+                                <span class="semester-selection" id="select-semester">Starting Semester</span>
+                            </a>
+                        </div>
+                        <ul class="sub-semester">
+                            <li><a href="#" data-value="Fall" id="fall" onclick="semester_choice(this)">Fall</a></li>
+                            <li><a href="#" data-value="Spring" class="semester-selection" id="spring"
+                                    onclick="semester_choice(this)">Spring</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="no_of_semester">
+                            <a href="#">
+                                <span class="number-semester" id="year">Starting Year</span>
+                            </a>
+                        </div>
+                        <ul class="sub-number-semester">
+                            <li><a href="#" data-value="2021" onclick="year(this)" id="2021">2021</a></li>
+                            <li><a href="#" data-value="2022" onclick="year(this)" id="2022">2022</a></li>
+                            <li><a href="#" data-value="2023" onclick="year(this)" id="2023">2023</a></li>
+                            <li><a href="#" data-value="2024" onclick="year(this)" id="2024">2024</a></li>
+                            <li><a href="#" data-value="2025" onclick="year(this)" id="2025">2025</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="no_of_semester">
+                            <a href="#">
+                                <span class="number-semester" id="number-of-semester">No. of Semesters</span>
+                            </a>
+                        </div>
+                        <ul class="sub-number-semester">
+                            <li><a href="#" data-value="2" onclick="no_semester(this)" id="2">2</a></li>
+                            <li><a href="#" data-value="3" onclick="no_semester(this)" id="3">3</a></li>
+                            <li><a href="#" data-value="4" onclick="no_semester(this)" id="4">4</a></li>
+                            <li><a href="#" data-value="5" onclick="no_semester(this)" id="5">5</a></li>
+                            <li><a href="#" data-value="6" onclick="no_semester(this)" id="6">6</a></li>
+                            <li><a href="#" data-value="7" onclick="no_semester(this)" id="7">7</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="campus_selection">
+                            <a href="#">
+                                <span class="campus_selection" id="select-campus">Campus</span>
+                            </a>
+                        </div>
+                        <ul class="sub-campus-selection">
+                            <li><a href="#" class="campus_selection" data-value="Blacksburg" id="bls"
+                                    onclick="campus(this)">Blacksburg</a></li>
+                            <li><a href="#" data-value="NCR" id="ncr" onclick="campus(this)">NCR</a></li>
+                            <li><a href="#" data-value="Virtual" id="vir" onclick="campus(this)">Virtual Only</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="concentration-selection">
+                            <a href="#">
+                                <span class="concentration-selection" id="concentration">Concentration</span>
+                            </a>
+                        </div>
+
+                        <ul class="sub-concentration-selection">
+                            <li><a href="#" class="concentration-selection" id="SDA"
+                                    onclick="concentration_selection(this)"
+                                    data-value="Software Development and Applications">Software Development and
+                                    Applications</a></li>
+                            <li><a href="#" data-value="Data Analytics and Artificial Intelligence" onclick="concentration_selection(this)"
+                                    id="da">Data Analytics and Artificial Intelligence</a></li>
+                            <li><a href="#" data-value="Computer Security" onclick="concentration_selection(this)"
+                                    id="cs">Computer Security</a></li>
+                            <li><a href="#" data-value="Human-Computer Interaction" onclick="concentration_selection(this)"
+                                    id="hci">Human-Computer Interaction</a></li>
+                        </ul>
+
+                    </li>
+
+                    <!-- <li>
+                        <div class="modality-selection">
+                            <a href="#">
+                                <span class="modality-selection" id="modality">Modality</span>
+                            </a>
+                        </div>
+
+                        <ul class="sub-modality-selection">
+                            <li><a href="#" class="modality-selection" data-value="Virtual" id="virtual"
+                                    onclick="modality(this)">Virtual</a></li>
+                            <li><a href="#" data-value="In Person" id="in_person" onclick="modality(this)">In Person</a>
+                            </li>
+                        </ul>
+
+                    </li> -->
+
+                    <li>
+                        <div class="waiver-selection">
+                            <a href="#">
+                                <span class="waiver-selection" id="waiver">CS5040 Waiver ?</span>
+                            </a>
+                        </div>
+
+                        <ul class="sub-waiver-selection">
+                            <li><a href="#" class="waiver-selection" data-value="Yes" id="yes"
+                                    onclick="waiver(this)">Yes</a></li>
+                            <li><a href="#" data-value="No" id="no" onclick="waiver(this)">No</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li><a href="#">
+                        <button class="generate_pos_button"
+                                type="submit">Proceed to Select Courses</button>
+                        </a></li>
+
+                </ul>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'open sans', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
+
+body {
+  background: url('../vt_pylons.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.side_bar{
+  background: #660000;
+  position: fixed;
+  left: 5;
+  width: 225px;
+  height: 100%;
+  padding: 20px;
+  -webkit-transition: all 0.5s ease;
+}
+
+.main_menu{
+  width: 100%;
+  position: relative;
+  background-color: #660000;
+}
+
+.title{
+  padding: 8px;
+  color: white;
+  font-weight: normal;
+  font-family: 'Ultra', sans-serif;
+  font-size: 18px;
+  line-height: 38px;
+  text-transform: uppercase;
+  text-shadow: 0 2px white, 0 3px #777;
+  text-align: center;
+  position: relative;
+}
+
+.search_courses{
+      font-size: 18px;
+      background-color: #660000;
+      color: white;
+}
+.body_page{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.full_page{
+  position: relative;
+
+}
+
+ul.topnav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: lightgray;
+position: -webkit-sticky; 
+position: sticky;
+top: 0;
+position: relative;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+display: block;
+color: black;
+text-align: center;
+font-size: 18px;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: gray;}
+
+ul.topnav li a.active {background-color: gray;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+ul.topnav li.right,
+ul.topnav li {float: none;}
+}
+
+th, td {
+  border:1px solid black;
+  padding:5px
+
+}
+#slider-frame{
+  width: 1110px;
+  position: relative;
+  align-content: center;
+  text-align: center;
+  margin: auto;
+  padding-top: 1%;
+
+}
+#results_summary{
+  overflow: hidden;
+  background-color: #E1E1E1E6;
+  position: relative;
+  border: 5px solid #E1E1E1E6;
+  padding: 5px;
+  text-align: center;
+  border-style: double;
+  border-width: 1 px;
+  border-color: black;
+ 
+}
+
+#invalid_pos{
+  overflow: hidden;
+  width: 98%;
+  background-color: #E1E1E1E6;
+  position: relative;
+  color: black;
+  margin-top: 1%;
+  padding: 1%;
+  border-radius: 10px;
+  border-color: black;
+  text-align: center;
+}
+
+.table{
+  color: black;
+  font-size: larger;
+}
+
+.base_options{
+  overflow: hidden;
+  width: 98%;
+  background-color: #E1E1E1E6;
+  position: relative;
+  color: black;
+  padding: 1%;
+  border-radius: 10px;
+  border-color: black;
+  position: relative;
+}
+
+.select_conc{
+  position: absolute;
+  color: black;
+  font-size: x-large;
+}
+
+.download_pos_button{
+  cursor: pointer;
+  position: relative;
+  float: right;
+  font-size: xx-large; 
+  font-weight: bold; 
+  border: 0.5px; 
+  background-color: #E1E1E1E6; 
+  box-shadow: 2px 5px black;
+  color: black;
+  text-align: center;
+  padding: 1%;
+  margin-right: 3%
+}
+
+.download_pos_button:hover {
+  background-color: #9f9f9fe6; 
+}

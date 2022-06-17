@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  web:
+    image: courseplannerformeng
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'courseplanner'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'CSD@mysql-1872'
+      MYSQL_ROOT_PASSWORD: 'CSD@mysql-1872'
+    expose:
+      - 8000
+    ports:
+      - '8000:8000'

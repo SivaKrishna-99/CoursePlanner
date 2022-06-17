@@ -1,0 +1,502 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans', sans-serif;
+
+}
+
+body {
+font-size: 14px;
+}
+
+.full_page{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
+.main_menu{
+    width: 100%;
+    height: 5%;
+    background-color: #660000;
+}
+
+.title{
+    padding: 8px;
+    color: white;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;
+    font-size: 18px;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+    text-align: center;
+}
+
+.search_courses{
+    font-size: 18px;
+    background-color: #660000;
+    color: white;
+}
+
+ul.topnav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: lightgray;
+position: -webkit-sticky; 
+position: sticky;
+top: 0;
+}
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: gray;}
+
+ul.topnav li a.active {background-color: gray;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+.semester1 {
+background: whitesmoke;
+opacity: 1;
+position: relative;
+top: 1%;
+left: 0;
+overflow: hidden;
+padding-left: 1%;
+}
+.semester1_header {
+width: 100%;
+height: 40px;
+color: white;
+font-size: x-large;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background: rgba(99,0,49,1);
+opacity: 1;
+position: relative;
+top: 0px;
+text-align: left;
+overflow: hidden;
+padding-left: 1%;
+padding-top: 0.5%;
+}
+
+.semester1_courses{
+    width: 90%;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.sem1_select_course1 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.sem1_select_course2 {
+    width: 100%;
+    background: rgba(255,232,232,1);
+    height: 50px;
+    opacity: 1;
+    position: relative;
+    font-size:large;
+    text-align: left;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding-left: 1%;
+}
+
+.sem1_select_course3 {
+    width: 100%;
+    background: rgba(255,232,232,1);
+    height: 50px;
+    opacity: 1;
+    position: relative;
+    font-size:large;
+    text-align: left;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding-left: 1%;
+}
+.sem1_select_course4 {
+    width: 100%;
+    background: rgba(255,232,232,1);
+    height: 50px;
+    opacity: 1;
+    position: relative;
+    font-size:large;
+    text-align: left;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding-left: 1%;
+}
+.semester2 {
+background:whitesmoke;
+opacity: 1;
+position: relative;
+top: 2%;
+left: 0;
+overflow: hidden;
+padding-left: 1%;
+}
+.semester2_header {
+width: 100%;
+height: 40px;
+color: white;
+font-size: x-large;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background: rgba(99,0,49,1);
+opacity: 1;
+position: relative;
+top: 0px;
+text-align: left;
+overflow: hidden;
+padding-left: 1%;
+padding-top: 0.5%;
+}
+
+.semester2_courses{
+width: 90%;
+position: relative;
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.sem2_select_course1 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.sem2_select_course2 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.sem2_select_course3 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+.sem2_select_course4 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+.semester3 {
+background: whitesmoke;
+opacity: 1;
+position: relative;
+top: 3%;
+left: 0;
+overflow: hidden;
+padding-left: 1%;
+}
+.semester3_header {
+width: 100%;
+height: 40px;
+color: white;
+font-size: x-large;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background: rgba(99,0,49,1);
+opacity: 1;
+position: relative;
+top: 0px;
+text-align: left;
+overflow: hidden;
+padding-left: 1%;
+padding-top: 0.5%;
+}
+
+.semester3_courses{
+    width: 90%;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.sem3_select_course1 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.sem3_select_course2 {
+    width: 100%;
+    background: rgba(255,232,232,1);
+    height: 50px;
+    opacity: 1;
+    position: relative;
+    font-size:large;
+    text-align: left;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding-left: 1%;
+}
+
+.sem3_select_course3 {
+    width: 100%;
+    background: rgba(255,232,232,1);
+    height: 50px;
+    opacity: 1;
+    position: relative;
+    font-size:large;
+    text-align: left;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding-left: 1%;
+}
+.sem3_select_course4 {
+    width: 100%;
+    background: rgba(255,232,232,1);
+    height: 50px;
+    opacity: 1;
+    position: relative;
+    font-size:large;
+    text-align: left;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding-left: 1%;
+}
+.semester4 {
+background: whitesmoke;
+opacity: 1;
+position: relative;
+top: 4%;
+left: 0;
+overflow: hidden;
+padding-left: 1%;
+}
+.semester4_header {
+width: 100%;
+height: 40px;
+color: white;
+font-size: x-large;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background: rgba(99,0,49,1);
+opacity: 1;
+position: relative;
+top: 0px;
+text-align: left;
+overflow: hidden;
+padding-left: 1%;
+padding-top: 0.5%;
+}
+
+.semester4_courses{
+width: 90%;
+position: relative;
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.sem4_select_course1 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.sem4_select_course2 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.sem4_select_course3 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+.sem4_select_course4 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+.semester5 {
+background: whitesmoke;
+opacity: 1;
+position: relative;
+top: 5%;
+left: 0;
+overflow: hidden;
+padding-left: 1%;
+}
+.semester5_header {
+width: 100%;
+height: 40px;
+color: white;
+font-size: x-large;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background: rgba(99,0,49,1);
+opacity: 1;
+position: relative;
+top: 0px;
+text-align: left;
+overflow: hidden;
+padding-left: 1%;
+padding-top: 0.5%;
+}
+
+.semester5_courses{
+width: 90%;
+position: relative;
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.sem5_select_course1 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.sem5_select_course2 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.sem5_select_course3 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+.sem5_select_course4 {
+width: 100%;
+background: rgba(255,232,232,1);
+height: 50px;
+opacity: 1;
+position: relative;
+font-size:large;
+text-align: left;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+padding-left: 1%;
+}
+
+.generate_button{
+    position: relative;
+    font-size: xx-large; 
+    font-weight: bold; 
+    border: 0.5px; 
+    background-color: darkslategrey; 
+    box-shadow: 2px 5px darkslategrey;
+    color: white;
+    text-align: center;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 5%;
+}

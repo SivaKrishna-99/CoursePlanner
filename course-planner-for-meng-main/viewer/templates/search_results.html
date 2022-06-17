@@ -1,0 +1,76 @@
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
+{% load static %}
+<html>
+
+
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/search_results.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet" />
+    <title>Course Planner</title>   
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    </head>
+
+    <body>
+        <div class="body_page">
+        <div class="main_menu">
+            <div class="title">
+                <h1>Course Planner</h1>
+            </div>
+  
+        </div>
+        
+        <ul class="topnav">
+          <!-- <li><a href="default.asp">Home</a></li> -->
+          <li ><a method= "GET" href = "{% url 'index' %}">Home</a></li>
+          <!-- <li style="float:right"><a href="contact.asp" >Search Courses  </a></li> -->
+          <li ><a method= "GET" href = "{% url 'search_courses' %}">Search Courses</a></li>
+          <li style="float:right"><a href="{% url 'about' %}">About</a></li>
+        </ul>
+        
+        
+        <div class="full_page">
+            
+            <div id="slider-frame">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col" width="450px">Course</th>
+                        <th scope="col" width="250px">Modality</th>
+                        <th scope="col" width="250px">Semester Offered</th>
+                     
+                      </tr>
+                    </thead>
+                
+                    {% for l in courses %}
+                        <tr>
+                            <div class="course-number">
+                                <a href= "#">
+                                <!-- <span class="course-number">Enter course number
+                                    <input class="course-number"> </input> 
+                                </span> -->
+                                </a>
+                                </div>
+                        <td style="text-align: center;"><a href="{% url 'search_detail' l.course_name %}">{{l.department}}{{l.course_number}}: {{l.course_name}}</a></td>
+                        <td style="text-align: center;">{{l.modality}}</td>
+                        <td style="text-align: center;">{{l.term_offering}}</td>
+                       </tr>
+                    {% endfor %}
+                
+                    
+                </table>
+            </div>
+        
+          
+            
+        
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+  
+          

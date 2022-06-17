@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script> -->
+  <script type="text/javascript">
+    var mandatory_courses = JSON.parse("{{ mandatory_courses|safe }}".replaceAll("'",'"').replaceAll("False","false").replaceAll("True","true").replaceAll("None","null"))
+    var concentration_courses = JSON.parse("{{ concentration_courses|safe }}".replaceAll("'",'"').replaceAll("False","false").replaceAll("True","true").replaceAll("None","null"))
+    var all_courses = JSON.parse("{{ all_courses|safe }}".replaceAll("'",'"').replaceAll("False","false").replaceAll("True","true").replaceAll("None","null"))
+    var semester_count = "{{ semester_count|safe }}"
+    var semester = "{{ semester|safe }}"
+    var semesters = "{{ semesters|safe }}"
+    var max_courses_per_sem = "{{ max_courses_per_sem|safe }}"
+    var year = "{{ year|safe }}"
+    var years = "{{ years|safe }}"
+    var cs5040waiver = "{{ cs5040waiver|safe }}"
+    var semesterYears = JSON.parse("{{ semesterYears|safe }}".replaceAll("'",'"'))
+    
+  </script>
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+  <script type="text/javascript" src="{% static 'js/select_courses.js' %}"></script>
+  
+  <link rel="stylesheet" href="{% static 'css/select_courses.css' %}"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <title>Course Planner</title>  
+</head>
+<body>
+  <div class="full_page">
+    <div class="main_menu">
+      <div class="title">
+        <h1>Course Planner</h1>
+      </div>
+    </div>
+
+    <ul class="topnav">
+      <li><a href="{% url 'index' %}">Home</a><about/li>
+      <li><a href="{% url 'search_courses' %}">Search Courses</a></li>
+      <li style="float:right"><a href="{% url 'about' %}">About</a></li>
+    </ul>
+    <form id="select_courses-form" name="selectCoursesForm" method="GET" 
+            action="{% url 'summary' %}" onsubmit='return validateForm();'>
+            <!-- <input type="hidden" name="selected_courses"> -->
+      <input type="hidden" name="waiver" value="{{waiver}}">
+      {% for i in semesterYears %}
+      <div class="semester1">
+        <div class="semester1_header">
+          <span>Semester {{forloop.counter}}: {{i}} </span>
+        </div>
+        <div class="semester1_courses" >
+          {% for j in max_courses_per_sem%}
+            <select name="{{forloop.parentloop.counter}}_{{j}}_{{i}}" id="{{forloop.parentloop.counter}}_{{j}}_{{i}}" class="sem1_select_course1" value="" onchange="updatePicklists({{forloop.parentloop.counter}}, {{j}}, '{{i}}')">
+              <option disabled>Select a Course</option>
+              </select>
+          {% endfor %}
+
+        </div>
+      </div>
+      {% endfor %}
+
+    <div class="generate_pos_button" id="generate_pos_button" style="text-align: center;">
+      <button class="generate_button" type="submit" >Validate POS</button>
+    </div>
+
+    </form>
+    
+  </div>
+</body>
+</html>

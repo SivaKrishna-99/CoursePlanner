@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Antic&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/valid_pos.css' %}">
+
+  <script type="text/javascript">
+    var courses_selected = JSON.parse("{{ courses|safe }}".replaceAll("'",'"').replaceAll("False","false").replaceAll("True","true").replaceAll("None","null"))
+    var errors = JSON.parse("{{ errors|safe }}".replaceAll("'",'"').replaceAll("False","false").replaceAll("True","true").replaceAll("None","null"))
+    var concentrations = JSON.parse("{{ concentrations|safe }}".replaceAll("'",'"').replaceAll("False","false").replaceAll("True","true").replaceAll("None","null"))
+
+  </script>
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+  <script type="text/javascript" src="{% static 'js/validate_pos.js' %}"></script>
+  <title>Course Planner</title>  
+</head>
+
+<body>
+  <div class="v29_257">
+    <div class="v29_330"></div>
+    <div class="v29_262">
+      <div class="v29_263"></div>
+      <span class="v29_264">Generate POS</span><span class="v29_265">Search Courses</span>
+      <span class="v29_267">CoursePlanner</span>
+    </div>
+    <div class="v29_368">
+      <div class="v29_331"></div><span class="v29_332">Summary</span>
+    </div>
+  </div>
+  <span class="v29_369">POS Valid </span>
+  <div class="v29_372"></div><span class="v29_373">Select Concentration</span>
+  <button type="button" class="v29_374" onclick="downloadPOS()">Download POS</button>
+  <button type="button" class="v49_80">Go Back</button>
+</div>
+
+  <table class="tb">
+    <tr>
+      <th>Semester</th>
+      <th>Course</th>
+      <th>Concentration</th>
+    </tr>
+    {% for i in courses %}
+      <tr id="tr1">
+        <td id="sem_course_1" style="text-align:center">{{i.semYear}}</td>
+        <td id="course_1" style="text-align:center">{{i.course.course_name}}</td>
+        <td id="concentration_1" style="text-align:center">{{i.course.concentration__names}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+
+  <div class="invalid_pos" id="invalid_pos">
+    {% if errors %}
+        <span style="font-size: large; font-weight: bold; font-size:x-large;text-decoration: underline;">INVALID POS<br></span>
+        {%for error in errors%}
+        <span class="invalid_pos_1" id="invalid_pos_1" style="font-size:large;">Reason 1: </span>
+        <span class="invalid_pos_r1" id="invalid_pos_r1" style="font-size: large;">{{error}}<br></span>
+        {% endfor %}
+    {% endif %}
+</div>
+</body>
+
+</html>

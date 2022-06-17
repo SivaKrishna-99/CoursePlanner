@@ -1,0 +1,450 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+
+
+body {
+    background: url("../vt_pylons.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.side_bar{
+    background: #660000;
+    position: fixed;
+    left: 5;
+    width: 225px;
+    height: 100%;
+    padding: 20px;
+    -webkit-transition: all 0.5s ease;
+}
+
+.main_menu{
+    width: 100%;
+    height: 20%;
+    background-color: #660000;
+}
+
+.title{
+    padding: 8px;
+    color: white;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;
+    font-size: 18px;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+    text-align: center;
+}
+
+.search_courses{
+        font-size: 18px;
+        background-color: #660000;
+        color: white;
+
+}
+
+.full_page{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lightgray;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: gray;}
+
+ul.topnav li a.active {background-color: gray;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+
+.side_bar_items li{
+    padding: 8px 8px 12px 12px;
+    font-size: 18px;
+    font-style: sans-serif;
+    position: relative;
+    list-style: none;
+    -webkit-transition: all 0.4s ease;
+}
+
+.side_bar_items li a{
+    color: #fff;
+    font-size: 18px;
+}
+
+ul.side_bar_items li:hover{
+    background: #B22222;
+}
+
+
+
+.side_bar_items li .sub-semester a{
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0.6;
+    -webkit-transition: all 0.3 ease;
+}
+
+.side_bar_items li .sub-semester a{
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0.6;
+    -webkit-transition: all 0.3 ease;
+}
+
+ul.side_bar_items.close .sub-semester{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    border-style: solid;
+    border-color: white;
+    /*padding: 10px 20px;*/
+    /*border-radius: 0 6px 6px 0;*/
+    -webkit-transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+ul.side_bar_items .sub-semester{
+    background-color: #660000;
+}
+
+ul.side_bar_items .sub-semester.semester-selection{
+    display: none;
+}
+
+ul.side_bar_items.close .sub-semester.semester-selection{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+
+ul.side_bar_items.close li:hover .sub-semester{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.campus{
+    background: rgba(255,232,232,1);
+    opacity: 1;
+    font-size: 15px;
+    
+}
+
+.no_of_semesters{
+    background: rgba(255,232,232,1);
+    opacity: 1;
+    font-size: 15px;
+    
+}
+
+.side_bar_items li .sub-number-semester a{
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0.6;
+    -webkit-transition: all 0.3 ease;
+}
+
+ul.side_bar_items.close .sub-number-semester{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    border-style: solid;
+    border-color: white;
+    /*padding: 10px 20px;*/
+    /*border-radius: 0 6px 6px 0;*/
+    -webkit-transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+ul.side_bar_items .sub-number-semester{
+    background-color: #660000;
+}
+
+ul.side_bar_items .sub-number-semester.number_semester{
+    display: none;
+}
+
+ul.side_bar_items.close .sub-number-semester.number_semester{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+
+ul.side_bar_items.close li:hover .sub-number-semester{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.concentration{
+    background: rgba(255,232,232,1);
+    opacity: 1;
+    font-size: 15px;
+    
+}
+
+.side_bar_items li .sub-campus-selection a{
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0.6;
+    -webkit-transition: all 0.3 ease;
+}
+
+ul.side_bar_items.close .sub-campus-selection{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    border-style: solid;
+    border-color: white;
+    /*padding: 10px 20px;*/
+    /*border-radius: 0 6px 6px 0;*/
+    -webkit-transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+ul.side_bar_items .sub-campus-selection{
+    background-color: #660000;
+}
+
+ul.side_bar_items .sub-campus-selection.campus_selection{
+    display: none;
+}
+
+ul.side_bar_items.close .sub-campus-selection.campus_selection{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+
+ul.side_bar_items.close li:hover .sub-campus-selection{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+.course_modality{
+    background: rgba(255,232,232,1);
+    opacity: 1;
+    font-size: 15px;
+    
+}
+
+
+.side_bar_items li .sub-concentration-selection a{
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0.6;
+    -webkit-transition: all 0.3 ease;
+}
+
+ul.side_bar_items.close .sub-concentration-selection{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    border-style: solid;
+    border-color: white;
+    /*padding: 10px 20px;*/
+    /*border-radius: 0 6px 6px 0;*/
+    -webkit-transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+ul.side_bar_items .sub-concentration-selection{
+    background-color: #660000;
+}
+
+ul.side_bar_items .sub-concentration-selection.concentration-selection{
+    display: none;
+}
+
+ul.side_bar_items.close .sub-concentration-selection.concentration-selection{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+
+ul.side_bar_items.close li:hover .sub-concentration-selection{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+.waiver{
+    background: rgba(255,232,232,1);
+    opacity: 1;
+    font-size: 15px;
+    
+}
+
+.side_bar_items li .sub-modality-selection a{
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0.6;
+    -webkit-transition: all 0.3 ease;
+}
+
+ul.side_bar_items.close .sub-modality-selection{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    border-style: solid;
+    border-color: white;
+    /*padding: 10px 20px;*/
+    /*border-radius: 0 6px 6px 0;*/
+    -webkit-transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+ul.side_bar_items .sub-modality-selection{
+    background-color: #660000;
+}
+
+ul.side_bar_items .sub-modality-selection.modality-selection{
+    display: none;
+}
+
+ul.side_bar_items.close .sub-modality-selection.modality-selection{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+
+ul.side_bar_items.close li:hover .sub-modality-selection{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.side_bar_items li .sub-waiver-selection a{
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 0.6;
+    -webkit-transition: all 0.3 ease;
+}
+
+
+ul.side_bar_items.close .sub-waiver-selection{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    border-style: solid;
+    border-color: white;
+    /*padding: 10px 20px;*/
+    /*border-radius: 0 6px 6px 0;*/
+    -webkit-transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+ul.side_bar_items .sub-waiver-selection{
+    background-color: #660000;
+}
+
+ul.side_bar_items .sub-waiver-selection.waiver-selection{
+    display: none;
+}
+
+ul.side_bar_items.close .sub-waiver-selection.waiver-selection{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+
+ul.side_bar_items.close li:hover .sub-waiver-selection{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+#slider-frame{
+    overflow: hidden;
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    /*padding: 10px;*/
+}
+img{
+        max-width: 100%;
+        max-height: 100%;
+        background-size: cover;
+}
+
+.generate_pos_button{
+    position: relative;
+    font-weight: bold;
+    font-size: large; 
+    border: 0.5px; 
+    background-color: #E1E1E1E6; 
+    box-shadow: 2px 5px black;
+    color: black;
+    text-align: center;
+  }
